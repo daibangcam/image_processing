@@ -7,7 +7,8 @@ img = cv2.imread('01.jpg')
 # đặt tên cửa sổ hiển thị file ảnh 
 # cv2.WINDOW_AUTOSIZE -> autosize window theo ảnh
 # cv2.WINDOW_NORMAL -> fit ảnh trong window
-cv2.namedWindow("Original RGB", cv2.WINDOW_NORMAL)
+cv2.namedWindow("Original RGB", cv2.WINDOW_AUTOSIZE)
+cv2.namedWindow("Gray image", cv2.WINDOW_AUTOSIZE)
 
 # chuyển sang ảnh xám
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
