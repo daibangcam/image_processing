@@ -33,9 +33,9 @@ thickness_circle = 3
 cv2.circle(img, center_circle, radius_circle, green_color, thickness_circle)
 
 # Vẽ hình chữ nhật màu đỏ
-# tọa độ đầu hình chữ nhật
+# tọa độ đầu hình chữ nhật (góc trên bên trái)
 start_point_rect = (100, 100)
-# tọa độ đuôi hình chữ nhật
+# tọa độ đuôi hình chữ nhật (góc dưới bên phải)
 end_point_rect = (300, 300)
 # màu hình chữ nhật trong format BGR
 red_color = (0, 0, 255)
@@ -45,7 +45,7 @@ cv2.rectangle(img, start_point_rect, end_point_rect, red_color, thickness_rect)
 
 # ghi chữ
 # nội dung text
-text = "OpenCV Drawing"
+text = "I LOVE HUIT"
 # font chữ
 font = cv2.FONT_HERSHEY_SIMPLEX
 # tỉ lệ scale
