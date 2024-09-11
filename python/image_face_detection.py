@@ -2,10 +2,10 @@
 import cv2
 
 # load thư viện nhận diện khuôn mặt vào biến haar_cascade (đặt tên biến tùy ý)
-haar_cascade = cv2.CascadeClassifier('Haarcascade_frontalface_default.xml')
+haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
   
 # load ảnh
-img = cv2.imread('01.jpg')
+img = cv2.imread('01.png')
   
 # chuyển sang ảnh xám
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
