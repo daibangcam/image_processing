@@ -2,10 +2,10 @@
 import cv2
 
 # load thư viện nhận diện khuôn mặt vào biến haar_cascade (đặt tên biến tùy ý)
-haar_cascade = cv2.CascadeClassifier('Haarcascade_frontalface_default.xml')
+haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
   
 # load ảnh
-img = cv2.imread('01.jpg')
+img = cv2.imread('01.png')
   
 # chuyển sang ảnh xám
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -22,7 +22,7 @@ faces_rect = haar_cascade.detectMultiScale(gray_img, 1.1, 9)
 # vẽ lại đường bao các khuôn mặt lên ảnh gốc
 # vòng lặp xét lần lượt khuôn mặt đầu tiên đến khuôn mặt cuối cùng đã phát hiện được
 for (x, y, w, h) in faces_rect:
-	# cắt ảnh vùng chứa khuôn mặt
+    # cắt ảnh vùng chứa khuôn mặt
     roi = img[y:y+h, x:x+w]
     # làm mờ vùng ảnh cắt
     roi = cv2.GaussianBlur(roi, (15, 15), 30)
